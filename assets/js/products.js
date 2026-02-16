@@ -81,12 +81,12 @@ const products = [
 
 function createProductCard(product) {
     return `
-        <a href="product.html?id=${product.id}" class="card product-card" style="text-decoration:none; position:relative;">
+        <a href="product.html?id=${product.id}" class="card product-card">
             ${product.soldOut ? '<span class="sold-out-badge">Sold Out</span>' : ''}
             <img src="${product.image}" alt="${product.name}, handmade artisanal soap" class="product-card-img" loading="lazy">
             <div class="product-info">
                 <h3 class="heading-sm">${product.name}</h3>
-                <p style="color: var(--color-gray); font-size: 0.85rem; margin: 0.4rem 0;">${product.description}</p>
+                <p class="product-description">${product.description}</p>
                 <p class="product-price">${product.price}</p>
             </div>
         </a>

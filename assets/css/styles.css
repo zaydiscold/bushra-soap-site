@@ -346,6 +346,17 @@ footer a:hover {
     text-align: center;
 }
 
+.product-card {
+    text-decoration: none;
+    position: relative;
+}
+
+.product-description {
+    color: var(--color-gray);
+    font-size: 0.85rem;
+    margin: 0.4rem 0;
+}
+
 .product-price {
     color: var(--color-terracotta);
     font-weight: 600;
