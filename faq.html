@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | KPK Botanicals</title>
+    <meta name="description"
+        content="Frequently asked questions about KPK Botanicals handmade artisanal soaps. Ingredients, shipping, care tips, and more.">
+    <link rel="icon" type="image/png" href="assets/images/kpk_botanicals_logo_1771215052715.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-linen);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            gap: 1rem;
+        }
+
+        .faq-question h3 {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--color-terracotta);
+            transition: transform var(--transition-fast);
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            padding-top: 1rem;
+            color: var(--color-gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+    </style>
+
+    <!-- FAQ Schema for AI / Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are KPK Botanicals soaps made of?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our soaps are made with saponified natural oils (olive, coconut, shea butter), essential oils, clays, botanicals, and other natural ingredients. We never use synthetic dyes, artificial fragrances, or harsh chemicals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your soaps safe for sensitive skin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our gentle, cold-process formulations are designed to be kind to all skin types. Our Milk & Honey and Oats & Scrub bars are especially popular with sensitive skin. As with any skincare product, we recommend patch-testing if you have allergies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy handmade artisanal soap in Sacramento California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KPK Botanicals is a handmade artisanal soap brand based in Sacramento, California. You can shop our full collection online at kpkbotanicals.com or contact us for local pickup in the Sacramento area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you ship nationwide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We ship to all 50 states with flat-rate shipping. Local pickup is also available in Sacramento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer wholesale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer wholesale pricing for boutiques, spas, and retailers. Visit our Contact page and select 'Wholesale Inquiry' to get started."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex flex-between">
+            <a href="index.html" class="logo-container">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
+                    BOTANICALS</span>
+            </a>
+            <div class="hidden-mobile">
+                <ul class="flex">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="about.html" class="nav-link">Our Story</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+                onclick="document.querySelector('.mobile-menu').classList.toggle('active')">Menu</button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+            <li><a href="index.html" class="heading-md">Home</a></li>
+            <li><a href="shop.html" class="heading-md">Shop</a></li>
+            <li><a href="about.html" class="heading-md">Our Story</a></li>
+            <li><a href="contact.html" class="heading-md">Contact</a></li>
+            <li><button class="btn btn-outline"
+                    onclick="document.querySelector('.mobile-menu').classList.remove('active')">Close</button></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <section class="section" style="text-align: center; background: var(--color-white);">
+        <div class="container">
+            <span class="font-accent" style="color: var(--color-terracotta);">FAQ</span>
+            <h1 class="heading-lg" style="margin: 0.5rem 0 1rem;">Frequently Asked Questions</h1>
+            <p class="text-lead" style="margin: 0 auto;">
+                Everything you need to know about our soaps, shipping, and more.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>What are your soaps made of?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Our soaps are made with saponified natural oils (olive, coconut, shea butter), essential
+                            oils, clays, botanicals, and other natural ingredients. We never use synthetic dyes,
+                            artificial fragrances, or harsh chemicals. Each product page lists its full ingredient list.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>Are your soaps safe for sensitive skin?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes! Our gentle, cold-process formulations are designed to be kind to all skin types. Our
+                            <strong>Milk & Honey</strong> and <strong>Oats & Scrub</strong> bars are especially popular
+                            with sensitive skin. As with any skincare product, we recommend patch-testing if you have
+                            known allergies.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>How long does a bar last?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            With proper care, each bar typically lasts 4–6 weeks of daily use. To maximize longevity,
+                            store your soap on a well-draining soap dish and keep it dry between uses.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>Do you ship nationwide?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes! We ship to all 50 states with flat-rate shipping. Orders are carefully wrapped
+                            and typically ship within 3 to 5 business days. Local pickup is also available in the
+                            Sacramento, CA area.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>Can I place a custom order?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Absolutely! We love creating custom scents and sets for special occasions, weddings, baby
+                            showers, corporate gifts, and more. <a href="contact.html"
+                                style="color: var(--color-terracotta);">Contact us</a> to discuss your ideas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>Are your products vegan and cruelty-free?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            All our products are cruelty-free; we never test on animals. Most of our bars are vegan,
+                            with the exception of our <strong>Milk & Honey</strong> bar, which contains goat milk and
+                            raw honey. Each product page specifies whether a bar is vegan.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>How do I store my soap?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Keep your soap on a draining soap dish in a dry, ventilated area between uses. Avoid leaving
+                            it in standing water. For unused bars, store in a cool, dry place. They'll continue to cure
+                            and get even better with time.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <h3>Do you offer wholesale?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes! We'd love to partner with boutiques, spas, salons, and retailers. We offer competitive
+                            wholesale pricing and can discuss custom labeling. Visit our <a
+                                href="contact.html?type=wholesale" style="color: var(--color-terracotta);">Contact
+                                page</a> and select "Wholesale Inquiry" to get started.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="background: var(--color-linen); text-align: center;">
+        <div class="container">
+            <h2 class="heading-md" style="margin-bottom: 1rem;">Still Have Questions?</h2>
+            <p style="color: var(--color-gray); margin-bottom: 2rem;">We're always happy to chat.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container grid grid-3" style="align-items: start;">
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
+                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">Small-batch artisanal soaps made with care
+                    and heritage.</p>
+            </div>
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="contact.html?type=wholesale">Wholesale</a></li>
+                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+            &copy; 2026 KPK Botanicals. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | KPK Botanicals</title>
+    <meta name="description"
+        content="Learn the story of KPK Botanicals, from the mountains of Pakistan to Sacramento, California. Handcrafted soaps rooted in tradition, made with love.">
+    <link rel="icon" type="image/png" href="assets/images/kpk_botanicals_logo_1771215052715.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .story-section {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .story-section p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .story-section p:first-of-type::first-letter {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+            color: var(--color-terracotta);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .process-step {
+            padding: 2rem 1.5rem;
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+        }
+
+        .process-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--color-terracotta);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            padding: 2rem;
+            border: 1px solid var(--color-linen);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition-fast);
+        }
+
+        .value-card:hover {
+            border-color: var(--color-terracotta);
+            transform: translateY(-2px);
+        }
+
+        .pull-quote {
+            font-family: var(--font-accent);
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--color-charcoal);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-left: 3px solid var(--color-terracotta);
+            margin: 3rem auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex flex-between">
+            <a href="index.html" class="logo-container">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
+                    BOTANICALS</span>
+            </a>
+            <div class="hidden-mobile">
+                <ul class="flex">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="about.html" class="nav-link"
+                            style="border-bottom: 1px solid var(--color-terracotta);">Our Story</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+                onclick="document.querySelector('.mobile-menu').classList.toggle('active')">Menu</button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+            <li><a href="index.html" class="heading-md">Home</a></li>
+            <li><a href="shop.html" class="heading-md">Shop</a></li>
+            <li><a href="about.html" class="heading-md">Our Story</a></li>
+            <li><a href="contact.html" class="heading-md">Contact</a></li>
+            <li><button class="btn btn-outline"
+                    onclick="document.querySelector('.mobile-menu').classList.remove('active')">Close</button></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="section" style="text-align: center; background: var(--color-white); padding-bottom: 2rem;">
+        <div class="container">
+            <span class="font-accent" style="color: var(--color-terracotta);">Our Story</span>
+            <h1 class="display-text" style="margin: 0.5rem 0 1rem;">From the Mountains<br>to Main Street</h1>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container story-section">
+            <p>In the misty highlands of Khyber Pakhtunkhwa, Pakistan, Bushra spent years perfecting the art of
+                soapmaking. Using recipes passed through generations and ingredients sourced from the rugged beauty of
+                her homeland, she crafted soaps that were more than products. They were rituals of care.</p>
+
+            <p>When life changed, Bushra packed her courage, her five children, and her craft, and made the journey to
+                America. She didn't just start over; she kept going. She carried the traditions of her homeland into a
+                new home to build something beautiful for her family.</p>
+
+            <p>Today, from her kitchen in Sacramento, California, she pours the same love and tradition into every bar.
+                Each one is handmade, hand-cut, and hand-wrapped. No factories. No shortcuts. Just a mother, her craft,
+                and the belief that something made with your own hands carries a piece of your heart.</p>
+        </div>
+    </section>
+
+    <!-- Pull Quote -->
+    <div class="pull-quote">
+        "Every bar tells a story of resilience and heritage."
+    </div>
+
+    <!-- The Process -->
+    <section class="section" style="background: var(--color-linen);">
+        <div class="container">
+            <h2 class="heading-lg" style="text-align: center; margin-bottom: 3rem;">How It's Made</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Source</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-gray);">Natural ingredients selected for each
+                        recipe.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Craft</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-gray);">Cold-process soapmaking by hand.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Cure</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-gray);">Cured for 4–6 weeks for a long-lasting bar.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Wrap</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-gray);">Hand-cut, inspected, and wrapped.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+        <div class="container">
+            <h2 class="heading-lg" style="text-align: center; margin-bottom: 3rem;">What We Stand For</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="heading-sm">All Natural</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">No synthetic dyes, no
+                        artificial fragrances, no harsh chemicals. Ever.</p>
+                </div>
+                <div class="value-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="heading-sm">Small Batch</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">Each batch is crafted
+                        with intention. When it's gone, it's gone.</p>
+                </div>
+                <div class="value-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="heading-sm">Woman Owned</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">Every purchase supports
+                        a family business.</p>
+                </div>
+                <div class="value-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="heading-sm">Heritage Recipes</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">Traditional techniques
+                        refined over generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section"
+        style="background: var(--color-olive-dark); text-align: center; color: var(--color-cream);">
+        <div class="container">
+            <h2 class="heading-lg" style="color: white; margin-bottom: 1rem;">Ready to Try a Bar?</h2>
+            <p style="opacity: 0.8; margin-bottom: 2rem; max-width: 50ch; margin-left: auto; margin-right: auto;">
+                Handmade with love. Rooted in tradition. Growing in America.
+            </p>
+            <a href="shop.html" class="btn btn-primary">Shop the Collection</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container grid grid-3" style="align-items: start;">
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
+                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">Small-batch artisanal soaps made with care
+                    and heritage.</p>
+            </div>
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="contact.html?type=wholesale">Wholesale</a></li>
+                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+            &copy; 2026 KPK Botanicals. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+/* 
+ * KPK Botanicals - Global Styles
+ * Based on Spec Sheet: Warm, Luxurious, Earthy, Natural
+ */
+
+:root {
+    /* Color Palette */
+    --color-cream: #F5F0EB;
+    --color-terracotta: #C67D5B;
+    --color-olive: #4A5D3A;
+    --color-olive-dark: #3A4A2E;
+    
+    --color-charcoal: #2D2926;
+    --color-gray: #8A8178;
+    --color-linen: #EDE8E1;
+    
+    --color-rose: #C4917B;
+    --color-honey: #D4A96A;
+    --color-sage: #B8C5A8;
+    --color-white: #FFFFFF;
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-accent: 'Cormorant Garamond', serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1rem;     /* 16px */
+    --spacing-md: 2rem;     /* 32px */
+    --spacing-lg: 4rem;     /* 64px */
+    --spacing-xl: 8rem;     /* 128px */
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(45, 41, 38, 0.05);
+    --shadow-hover: 0 8px 30px rgba(45, 41, 38, 0.12);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography Classes */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-charcoal);
+}
+
+.display-text {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -0.02em;
+}
+
+.heading-lg {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.heading-md {
+    font-size: 1.75rem;
+}
+
+.heading-sm {
+    font-size: 1.25rem;
+}
+
+.text-lead {
+    font-size: 1.25rem;
+    color: var(--color-gray);
+    max-width: 60ch;
+}
+
+.font-accent {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* Layout Utilities */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section {
+    padding: var(--spacing-lg) 0;
+}
+
+.grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+.flex {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.hidden-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hidden-mobile {
+        display: block;
+    }
+}
+
+/* Components */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #A9684C;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+    border: 1px solid var(--color-charcoal);
+    color: var(--color-charcoal);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-white);
+}
+
+.card {
+    background: var(--color-white);
+    border-radius: var(--radius-md); /* Softer corners */
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Navigation */
+.navbar {
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(245, 240, 235, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-terracotta);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.logo-container img {
+    height: 60px; /* Adjust based on logo aspect ratio */
+    width: auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-olive-dark);
+    color: var(--color-cream);
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+footer a:hover {
+    color: var(--color-honey);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-cream);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform var(--transition-smooth);
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+/* Specific Section Styles */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('../images/hero-bg.webp'); /* Placeholder */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Product Card Specifics */
+.product-card-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--color-linen);
+}
+
+.product-info {
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+.product-price {
+    color: var(--color-terracotta);
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+
+.sold-out-badge {
+    background-color: var(--color-gray);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Wholesale | KPK Botanicals</title>
+    <meta name="description"
+        content="Get in touch with KPK Botanicals for orders, questions, or wholesale inquiries. We'd love to hear from you.">
+    <link rel="icon" type="image/png" href="assets/images/kpk_botanicals_logo_1771215052715.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--color-charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--color-linen);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            background: var(--color-white);
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-terracotta);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-linen);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-linen);
+            font-size: 0.95rem;
+        }
+
+        .contact-link:last-child {
+            border-bottom: none;
+        }
+
+        .contact-link:hover {
+            color: var(--color-terracotta);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex flex-between">
+            <a href="index.html" class="logo-container">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
+                    BOTANICALS</span>
+            </a>
+            <div class="hidden-mobile">
+                <ul class="flex">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="about.html" class="nav-link">Our Story</a></li>
+                    <li><a href="contact.html" class="nav-link"
+                            style="border-bottom: 1px solid var(--color-terracotta);">Contact</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+                onclick="document.querySelector('.mobile-menu').classList.toggle('active')">Menu</button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+            <li><a href="index.html" class="heading-md">Home</a></li>
+            <li><a href="shop.html" class="heading-md">Shop</a></li>
+            <li><a href="about.html" class="heading-md">Our Story</a></li>
+            <li><a href="contact.html" class="heading-md">Contact</a></li>
+            <li><button class="btn btn-outline"
+                    onclick="document.querySelector('.mobile-menu').classList.remove('active')">Close</button></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <section class="section" style="text-align: center; background: var(--color-white); padding-bottom: 0;">
+        <div class="container">
+            <span class="font-accent" style="color: var(--color-terracotta);">Get in Touch</span>
+            <h1 class="heading-lg" style="margin: 0.5rem 0 1rem;">We'd Love to Hear From You</h1>
+            <p class="text-lead" style="margin: 0 auto;">
+                Whether you have a question, want to place a custom order, or are interested in stocking our soaps,
+                don't be a stranger.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form + Sidebar -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Form -->
+                <div>
+                    <form id="contact-form" action="https://formspree.io/f/PLACEHOLDER" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Choose a topic...</option>
+                                <option value="general">General Question</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="custom">Custom / Pre-Order</option>
+                                <option value="wholesale">Wholesale Inquiry</option>
+                                <option value="other">Something Else</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us what's on your mind..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; text-align: center;">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <div class="contact-card">
+                        <h3 class="heading-sm">Reach Us Directly</h3>
+                        <div class="contact-link">
+                            <span style="font-size: 1.2rem; color: var(--color-terracotta);">&#9993;</span>
+                            <a href="mailto:hello@kpkbotanicals.com">hello@kpkbotanicals.com</a>
+                        </div>
+                        <div class="contact-link">
+                            <span style="font-size: 1.2rem; color: var(--color-terracotta);">&#128222;</span>
+                            <a href="https://wa.me/1XXXXXXXXXX" target="_blank">WhatsApp Us</a>
+                        </div>
+                        <div class="contact-link">
+                            <span style="font-size: 1.2rem; color: var(--color-terracotta);">&#9742;</span>
+                            <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card" style="border-left: 3px solid var(--color-honey);">
+                        <h3 class="heading-sm">Wholesale Inquiries</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-gray); line-height: 1.6;">
+                            Interested in stocking KPK Botanicals in your shop, spa, or boutique? Select "Wholesale
+                            Inquiry" in the form, or email us directly. We offer competitive wholesale pricing and
+                            custom labeling options.
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="heading-sm">Based In</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-gray);">
+                            Sacramento, California<br>
+                            <span style="font-size: 0.8rem;">Shipping nationwide</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container grid grid-3" style="align-items: start;">
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
+                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">Small-batch artisanal soaps made with care
+                    and heritage.</p>
+            </div>
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="contact.html?type=wholesale">Wholesale</a></li>
+                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+            &copy; 2026 KPK Botanicals. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Auto-select wholesale in the subject dropdown if arriving from ?type=wholesale
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('type') === 'wholesale') {
+                document.getElementById('subject').value = 'wholesale';
+            }
+        });
+    </script>
+</body>
+
+</html>
