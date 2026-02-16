@@ -20,6 +20,50 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        #homepage-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('assets/images/hero_hd.png');
+        }
+
+        .usp-section {
+            background-color: var(--color-olive-dark);
+            color: var(--color-cream);
+            text-align: center;
+        }
+
+        .usp-section .icon-wrap {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .usp-section .heading-sm {
+            color: var(--color-white);
+        }
+
+        .usp-section p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .usp-grid {
+            gap: 3rem;
+        }
+
+        .featured-header {
+            margin-bottom: 2rem;
+            align-items: baseline;
+        }
+
+        .view-all-link {
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .intro-cta {
+            margin-top: 2rem;
+        }
+    </style>
 
     <!-- SEO Schema (JSON-LD) -->
     <script type="application/ld+json">
@@ -48,24 +92,21 @@
     <nav class="navbar">
         <div class="container flex flex-between">
             <a href="index.html" class="logo-container">
-                <!-- Logotype text for now, can replace with image -->
-                <span
-                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
-                    BOTANICALS</span>
+                <span class="logo-text">KPK BOTANICALS</span>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden-mobile">
                 <ul class="flex">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link nav-active">Home</a></li>
                     <li><a href="shop.html" class="nav-link">Shop</a></li>
                     <li><a href="about.html" class="nav-link">Our Story</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
 
-            <!-- Mobile Menu Toggle (Simple placeholder) -->
-            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+            <!-- Mobile Menu Toggle -->
+            <button class="btn btn-outline btn-menu"
                 onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
                 Menu
             </button>
@@ -74,7 +115,7 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu">
-        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+        <ul class="flex flex-col mobile-menu-list">
             <li><a href="index.html" class="heading-md"
                     onclick="document.querySelector('.mobile-menu').classList.remove('active')">Home</a></li>
             <li><a href="shop.html" class="heading-md"
@@ -89,13 +130,10 @@
     </div>
 
     <!-- Hero Section -->
-    <header class="hero"
-        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('assets/images/hero_hd.png');">
-        <!-- Note: We need a hero image. For now, referencing a placeholder we should generate or pick from product shots -->
+    <header class="hero" id="homepage-hero">
         <div class="container">
-            <h1 class="display-text" style="color: var(--color-white); margin-bottom: 1rem;">From the Mountains <br> to
-                Main Street</h1>
-            <p class="text-lead" style="color: var(--color-white); margin: 0 auto 2rem; opacity: 0.9;">
+            <h1 class="display-text">From the Mountains <br> to Main Street</h1>
+            <p class="text-lead">
                 Handcrafted artisanal soaps rooted in tradition, <br> made with love in Sacramento.
             </p>
             <a href="shop.html" class="btn btn-primary">Shop the Collection</a>
@@ -103,15 +141,15 @@
     </header>
 
     <!-- Brand Intro -->
-    <section class="section" style="text-align: center; background-color: var(--color-white);">
+    <section class="section section-intro">
         <div class="container">
-            <span class="font-accent" style="color: var(--color-terracotta);">Welcome to KPK Botanicals</span>
-            <h2 class="heading-lg" style="margin: 0.5rem 0 1.5rem;">Rooted in Tradition. Growing in America.</h2>
-            <p class="text-lead" style="margin: 0 auto;">
+            <span class="font-accent link-terracotta">Welcome to KPK Botanicals</span>
+            <h2 class="heading-lg">Rooted in Tradition. Growing in America.</h2>
+            <p class="text-lead">
                 Every bar carries a story of resilience and heritage. Crafted in small batches using recipes perfected
                 in the mountains of Pakistan, our soaps bring nature's luxury to your daily ritual.
             </p>
-            <div style="margin-top: 2rem;">
+            <div class="intro-cta">
                 <a href="about.html" class="btn btn-outline">Read Our Story</a>
             </div>
         </div>
@@ -120,11 +158,9 @@
     <!-- Featured Products -->
     <section class="section">
         <div class="container">
-            <div class="flex flex-between" style="margin-bottom: 2rem; align-items: baseline;">
+            <div class="flex flex-between featured-header">
                 <h2 class="heading-md">Seasonal Favorites</h2>
-                <a href="shop.html"
-                    style="font-weight: 500; font-size: 0.9rem; border-bottom: 1px solid currentColor;">View All
-                    &rarr;</a>
+                <a href="shop.html" class="view-all-link">View All &rarr;</a>
             </div>
 
             <div id="featured-products" class="grid grid-3">
@@ -134,44 +170,41 @@
     </section>
 
     <!-- Values / USP -->
-    <section class="section"
-        style="background-color: var(--color-olive-dark); color: var(--color-cream); text-align: center;">
+    <section class="section usp-section">
         <div class="container">
-            <div class="grid grid-3" style="gap: 3rem;">
+            <div class="grid grid-3 usp-grid">
                 <div>
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
                             <path d="M12 8v4l3 3"></path>
                         </svg>
-                    </div> <!-- Leaf Icon Placeholder -->
-                    <h3 class="heading-sm" style="color: var(--color-white);">100% Natural</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Free from harsh chemicals, synthetic dyes, and
-                        artificial fragrances.</p>
+                    </div>
+                    <h3 class="heading-sm">100% Natural</h3>
+                    <p>Free from harsh chemicals, synthetic dyes, and artificial fragrances.</p>
                 </div>
                 <div>
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
-                    </div> <!-- Shield/Handcrafted Icon Placeholder -->
-                    <h3 class="heading-sm" style="color: var(--color-white);">Handcrafted</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Made in small batches in Sacramento to ensure the
-                        highest quality.</p>
+                    </div>
+                    <h3 class="heading-sm">Handcrafted</h3>
+                    <p>Made in small batches in Sacramento to ensure the highest quality.</p>
                 </div>
                 <div>
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                             </path>
                         </svg>
-                    </div> <!-- Heart Icon Placeholder -->
-                    <h3 class="heading-sm" style="color: var(--color-white);">Woman Owned</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Supporting a family business and an American dream.</p>
+                    </div>
+                    <h3 class="heading-sm">Woman Owned</h3>
+                    <p>Supporting a family business and an American dream.</p>
                 </div>
             </div>
         </div>
@@ -179,32 +212,31 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container grid grid-3" style="align-items: start;">
+        <div class="container grid grid-3 footer-grid">
             <div>
-                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
-                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--brand">KPK Botanicals</h4>
+                <p class="footer-tagline">
                     Small-batch artisanal soaps made with care and heritage.
                 </p>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Shop</h4>
+                <ul class="footer-links">
                     <li><a href="shop.html">All Products</a></li>
                     <li><a href="contact.html?type=wholesale">Wholesale</a></li>
-                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                    <li><a href="faq.html">FAQ &amp; Shipping</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Connect</h4>
+                <ul class="footer-links">
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+        <div class="container footer-bottom">
             &copy; 2026 KPK Botanicals. All rights reserved.
         </div>
     </footer>

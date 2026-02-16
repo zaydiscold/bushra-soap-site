@@ -82,6 +82,43 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
+
+        .product-brand-label {
+            color: var(--color-terracotta);
+            font-size: 0.95rem;
+        }
+
+        .product-title {
+            margin: 0.25rem 0 0.5rem;
+        }
+
+        .product-price-lg {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-desc {
+            color: var(--color-gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-full {
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-buy {
+            margin-bottom: 0.75rem;
+        }
+
+        .scent-section {
+            margin-top: 2rem;
+        }
+
+        .related-heading {
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 
@@ -91,9 +128,7 @@
     <nav class="navbar">
         <div class="container flex flex-between">
             <a href="index.html" class="logo-container">
-                <span
-                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
-                    BOTANICALS</span>
+                <span class="logo-text">KPK BOTANICALS</span>
             </a>
             <div class="hidden-mobile">
                 <ul class="flex">
@@ -103,12 +138,12 @@
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
-            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+            <button class="btn btn-outline btn-menu"
                 onclick="document.querySelector('.mobile-menu').classList.toggle('active')">Menu</button>
         </div>
     </nav>
     <div class="mobile-menu">
-        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+        <ul class="flex flex-col mobile-menu-list">
             <li><a href="index.html" class="heading-md">Home</a></li>
             <li><a href="shop.html" class="heading-md">Shop</a></li>
             <li><a href="about.html" class="heading-md">Our Story</a></li>
@@ -119,12 +154,10 @@
     </div>
 
     <!-- Breadcrumb -->
-    <div style="background: var(--color-white); padding: 1rem 0; border-bottom: 1px solid var(--color-linen);">
-        <div class="container"
-            style="padding-top: 2rem; padding-bottom: 1rem; font-size: 0.9rem; color: var(--color-gray);">
-            <a href="index.html">Home</a> <span style="margin: 0 0.5rem; opacity: 0.5;">/</span> <a
-                href="shop.html">Shop</a> <span style="margin: 0 0.5rem; opacity: 0.5;">/</span> <span
-                id="breadcrumb-current" style="color: var(--color-terracotta);"></span>
+    <div class="breadcrumb-wrap">
+        <div class="container detail-text">
+            <a href="index.html">Home</a> <span class="breadcrumb-sep">/</span> <a href="shop.html">Shop</a> <span
+                class="breadcrumb-sep">/</span> <span id="breadcrumb-name" class="breadcrumb-current"></span>
         </div>
     </div>
 
@@ -132,46 +165,44 @@
     <section class="section">
         <div class="container">
             <div class="product-detail" id="product-detail">
-                <p style="color: var(--color-gray);">Loading product...</p>
+                <p class="detail-text">Loading product...</p>
             </div>
         </div>
     </section>
 
     <!-- Related Products -->
-    <section class="section" style="background: var(--color-white);">
+    <section class="section section-white">
         <div class="container">
-            <h2 class="heading-md" style="margin-bottom: 2rem;">You Might Also Love</h2>
+            <h2 class="heading-md related-heading">You Might Also Love</h2>
             <div id="related-products" class="related-grid"></div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container grid grid-3" style="align-items: start;">
+        <div class="container grid grid-3 footer-grid">
             <div>
-                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
-                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">Small-batch artisanal soaps made with care
-                    and heritage.</p>
+                <h4 class="heading-sm footer-col-heading footer-col-heading--brand">KPK Botanicals</h4>
+                <p class="footer-tagline">Small-batch artisanal soaps made with care and heritage.</p>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Shop</h4>
+                <ul class="footer-links">
                     <li><a href="shop.html">All Products</a></li>
                     <li><a href="contact.html?type=wholesale">Wholesale</a></li>
-                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                    <li><a href="faq.html">FAQ &amp; Shipping</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Connect</h4>
+                <ul class="footer-links">
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+        <div class="container footer-bottom">
             &copy; 2026 KPK Botanicals. All rights reserved.
         </div>
     </footer>
@@ -185,7 +216,7 @@
             const container = document.getElementById('product-detail');
 
             if (!product) {
-                container.innerHTML = '<p>Product not found. <a href="shop.html" style="color: var(--color-terracotta);">Return to shop</a></p>';
+                container.innerHTML = '<p>Product not found. <a href="shop.html" class="link-terracotta">Return to shop</a></p>';
                 return;
             }
 
@@ -217,25 +248,25 @@
                     <img src="${product.image}" alt="${product.name}" class="product-detail-img">
                 </div>
                 <div>
-                    <span class="font-accent" style="color: var(--color-terracotta); font-size: 0.95rem;">KPK Botanicals</span>
-                    <h1 class="heading-lg" style="margin: 0.25rem 0 0.5rem;">${product.name}</h1>
-                    <p class="product-price" style="font-size: 1.5rem; margin-bottom: 1.5rem;">${product.price}</p>
+                    <span class="font-accent product-brand-label">KPK Botanicals</span>
+                    <h1 class="heading-lg product-title">${product.name}</h1>
+                    <p class="product-price product-price-lg">${product.price}</p>
                     
-                    <p style="color: var(--color-gray); line-height: 1.7; margin-bottom: 1.5rem;">
+                    <p class="product-desc">
                         ${product.longDescription}
                     </p>
 
-                    <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; margin-bottom: 0.75rem;" 
+                    <a href="#" class="btn btn-primary btn-full btn-buy" 
                        onclick="alert('Shop opening soon! Contact us to pre-order.'); return false;">
                         ${product.soldOut ? 'Sold Out' : 'Buy Now'}
                     </a>
-                    <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">
+                    <a href="contact.html" class="btn btn-outline btn-full">
                         Contact to Pre-Order
                     </a>
 
                     <!-- Scent Notes -->
-                    <div style="margin-top: 2rem;">
-                        <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray); margin-bottom: 0.75rem;">Scent Profile</h4>
+                    <div class="scent-section">
+                        <h4 class="detail-section h4">Scent Profile</h4>
                         <div class="scent-notes">
                             <div class="scent-note">
                                 <div class="scent-note-label">Top</div>
@@ -255,19 +286,19 @@
                     <!-- Ingredients -->
                     <div class="detail-section">
                         <h4>Ingredients</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray);">${product.ingredients}</p>
+                        <p class="detail-text">${product.ingredients}</p>
                     </div>
 
                     <!-- Weight -->
                     <div class="detail-section">
                         <h4>Size</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray);">${product.weight} / hand-cut rectangular bar</p>
+                        <p class="detail-text">${product.weight} / hand-cut rectangular bar</p>
                     </div>
 
                     <!-- Shipping -->
                     <div class="detail-section">
                         <h4>Shipping</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray);">Flat rate shipping / Ships from Sacramento, CA</p>
+                        <p class="detail-text">Flat rate shipping / Ships from Sacramento, CA</p>
                     </div>
                 </div>
             `;

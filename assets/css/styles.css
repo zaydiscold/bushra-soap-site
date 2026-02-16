@@ -9,11 +9,11 @@
     --color-terracotta: #C67D5B;
     --color-olive: #4A5D3A;
     --color-olive-dark: #3A4A2E;
-    
+
     --color-charcoal: #2D2926;
     --color-gray: #8A8178;
     --color-linen: #EDE8E1;
-    
+
     --color-rose: #C4917B;
     --color-honey: #D4A96A;
     --color-sage: #B8C5A8;
@@ -25,11 +25,16 @@
     --font-accent: 'Cormorant Garamond', serif;
 
     /* Spacing */
-    --spacing-xs: 0.5rem;   /* 8px */
-    --spacing-sm: 1rem;     /* 16px */
-    --spacing-md: 2rem;     /* 32px */
-    --spacing-lg: 4rem;     /* 64px */
-    --spacing-xl: 8rem;     /* 128px */
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 1rem;
+    /* 16px */
+    --spacing-md: 2rem;
+    /* 32px */
+    --spacing-lg: 4rem;
+    /* 64px */
+    --spacing-xl: 8rem;
+    /* 128px */
 
     /* Border Radius */
     --radius-sm: 4px;
@@ -47,7 +52,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -84,7 +91,12 @@ ul {
 }
 
 /* Typography Classes */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
@@ -137,8 +149,13 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-md);
 }
 
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
 
 .flex {
     display: flex;
@@ -207,10 +224,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
     background: var(--color-white);
-    border-radius: var(--radius-md); /* Softer corners */
+    border-radius: var(--radius-md);
+    /* Softer corners */
     overflow: hidden;
     transition: var(--transition-smooth);
-    border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border */
 }
 
 .card:hover {
@@ -225,8 +244,9 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     z-index: 1000;
     background-color: rgba(245, 240, 235, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-link {
@@ -252,7 +272,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-container img {
-    height: 60px; /* Adjust based on logo aspect ratio */
+    height: 60px;
+    /* Adjust based on logo aspect ratio */
     width: auto;
 }
 
@@ -293,7 +314,8 @@ footer a:hover {
     min-height: 80vh;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('../images/hero-bg.webp'); /* Placeholder */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/hero-bg.webp');
+    /* Placeholder */
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -333,4 +355,320 @@ footer a:hover {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+/* -- Utility classes to replace inline styles -- */
+
+/* Navbar logo text */
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* Mobile menu list layout */
+.mobile-menu-list {
+    text-align: center;
+    gap: 2rem;
+}
+
+/* Menu button (borderless) */
+.btn-menu {
+    padding: 0.5rem;
+    border: none;
+}
+
+/* Section header block (centered) */
+.section-header {
+    text-align: center;
+    background: var(--color-white);
+}
+
+.section-header .font-accent {
+    color: var(--color-terracotta);
+}
+
+.section-header .heading-lg {
+    margin: 0.5rem 0 1rem;
+}
+
+.section-header .text-lead {
+    margin: 0 auto;
+}
+
+/* Hero text overrides */
+.hero .display-text {
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.hero .text-lead {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+/* Brand intro section */
+.section-intro {
+    text-align: center;
+    background: var(--color-white);
+}
+
+.section-intro .heading-lg {
+    margin-bottom: 1rem;
+}
+
+.section-intro .text-lead {
+    margin: 0 auto 2rem;
+}
+
+/* USP / value card icon container */
+.icon-wrap {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-terracotta);
+}
+
+/* Contact icon (sidebar) */
+.contact-icon {
+    font-size: 1.2rem;
+    color: var(--color-terracotta);
+}
+
+/* Breadcrumb */
+.breadcrumb-wrap {
+    background: var(--color-white);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-linen);
+}
+
+.breadcrumb-sep {
+    margin: 0 0.5rem;
+    opacity: 0.5;
+}
+
+.breadcrumb-current {
+    color: var(--color-terracotta);
+}
+
+/* Pull quote */
+.pull-quote {
+    background: var(--color-linen);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--color-charcoal);
+}
+
+/* Shipping banner */
+.shipping-banner {
+    background-color: var(--color-linen);
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* Footer layout helpers */
+.footer-grid {
+    align-items: start;
+}
+
+.footer-col-heading {
+    margin-bottom: 1rem;
+}
+
+.footer-col-heading--brand {
+    color: var(--color-honey);
+}
+
+.footer-col-heading--link {
+    color: var(--color-white);
+}
+
+.footer-tagline {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    max-width: 30ch;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* CTA section */
+.section-cta {
+    background: var(--color-linen);
+    text-align: center;
+}
+
+.section-cta .heading-md {
+    margin-bottom: 1rem;
+}
+
+.section-cta p {
+    color: var(--color-gray);
+    margin-bottom: 2rem;
+}
+
+/* No-top-padding utility */
+.pt-0 {
+    padding-top: 0;
+}
+
+/* Detail text */
+.detail-text {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+/* Terracotta link */
+.link-terracotta {
+    color: var(--color-terracotta);
+}
+
+/* Active nav link */
+.nav-active {
+    border-bottom: 1px solid var(--color-terracotta);
+}
+
+/* Section backgrounds */
+.section-linen {
+    background: var(--color-linen);
+}
+
+.section-white {
+    background: var(--color-white);
+}
+
+/* Dark CTA */
+.section-dark-cta {
+    background: var(--color-olive-dark);
+    text-align: center;
+    color: var(--color-cream);
+}
+
+.section-dark-cta .heading-lg {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.section-dark-cta p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Process step children */
+.process-step .heading-sm {
+    margin-bottom: 0.5rem;
+}
+
+/* Value card children */
+.value-card p {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    margin-top: 0.5rem;
+}
+
+/* Centered heading with large bottom margin */
+.heading-centered {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* About hero (no bottom padding) */
+.section-header--hero {
+    padding-bottom: 2rem;
+}
+
+.section-header--hero .display-text {
+    margin: 0.5rem 0 1rem;
+}
+
+/* Contact grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact card */
+.contact-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Form elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-linen);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-fast);
+    background: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+}
+
+/* Text utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-small {
+    font-size: 0.8rem;
 }

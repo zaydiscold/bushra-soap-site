@@ -82,18 +82,6 @@
             border-color: var(--color-terracotta);
             transform: translateY(-2px);
         }
-
-        .pull-quote {
-            font-family: var(--font-accent);
-            font-style: italic;
-            font-size: 1.6rem;
-            color: var(--color-charcoal);
-            text-align: center;
-            padding: 3rem 2rem;
-            border-left: 3px solid var(--color-terracotta);
-            margin: 3rem auto;
-            max-width: 600px;
-        }
     </style>
 </head>
 
@@ -103,25 +91,22 @@
     <nav class="navbar">
         <div class="container flex flex-between">
             <a href="index.html" class="logo-container">
-                <span
-                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
-                    BOTANICALS</span>
+                <span class="logo-text">KPK BOTANICALS</span>
             </a>
             <div class="hidden-mobile">
                 <ul class="flex">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="shop.html" class="nav-link">Shop</a></li>
-                    <li><a href="about.html" class="nav-link"
-                            style="border-bottom: 1px solid var(--color-terracotta);">Our Story</a></li>
+                    <li><a href="about.html" class="nav-link nav-active">Our Story</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
-            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+            <button class="btn btn-outline btn-menu"
                 onclick="document.querySelector('.mobile-menu').classList.toggle('active')">Menu</button>
         </div>
     </nav>
     <div class="mobile-menu">
-        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+        <ul class="flex flex-col mobile-menu-list">
             <li><a href="index.html" class="heading-md">Home</a></li>
             <li><a href="shop.html" class="heading-md">Shop</a></li>
             <li><a href="about.html" class="heading-md">Our Story</a></li>
@@ -132,15 +117,15 @@
     </div>
 
     <!-- Hero -->
-    <section class="section" style="text-align: center; background: var(--color-white); padding-bottom: 2rem;">
+    <section class="section section-header section-header--hero">
         <div class="container">
-            <span class="font-accent" style="color: var(--color-terracotta);">Our Story</span>
-            <h1 class="display-text" style="margin: 0.5rem 0 1rem;">From the Mountains<br>to Main Street</h1>
+            <span class="font-accent">Our Story</span>
+            <h1 class="display-text">From the Mountains<br>to Main Street</h1>
         </div>
     </section>
 
     <!-- Story -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section pt-0">
         <div class="container story-section">
             <p>In the misty highlands of Khyber Pakhtunkhwa, Pakistan, Bushra spent years perfecting the art of
                 soapmaking. Using recipes passed through generations and ingredients sourced from the rugged beauty of
@@ -162,31 +147,29 @@
     </div>
 
     <!-- The Process -->
-    <section class="section" style="background: var(--color-linen);">
+    <section class="section section-linen">
         <div class="container">
-            <h2 class="heading-lg" style="text-align: center; margin-bottom: 3rem;">How It's Made</h2>
+            <h2 class="heading-lg heading-centered">How It's Made</h2>
             <div class="process-grid">
                 <div class="process-step">
                     <div class="process-number">1</div>
-                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Source</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-gray);">Natural ingredients selected for each
-                        recipe.</p>
+                    <h3 class="heading-sm">Source</h3>
+                    <p class="detail-text">Natural ingredients selected for each recipe.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">2</div>
-                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Craft</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-gray);">Cold-process soapmaking by hand.</p>
+                    <h3 class="heading-sm">Craft</h3>
+                    <p class="detail-text">Cold-process soapmaking by hand.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">3</div>
-                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Cure</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-gray);">Cured for 4–6 weeks for a long-lasting bar.
-                    </p>
+                    <h3 class="heading-sm">Cure</h3>
+                    <p class="detail-text">Cured for 4 to 6 weeks for a long-lasting bar.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">4</div>
-                    <h3 class="heading-sm" style="margin-bottom: 0.5rem;">Wrap</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-gray);">Hand-cut, inspected, and wrapped.</p>
+                    <h3 class="heading-sm">Wrap</h3>
+                    <p class="detail-text">Hand-cut, inspected, and wrapped.</p>
                 </div>
             </div>
         </div>
@@ -195,10 +178,10 @@
     <!-- Values -->
     <section class="section">
         <div class="container">
-            <h2 class="heading-lg" style="text-align: center; margin-bottom: 3rem;">What We Stand For</h2>
+            <h2 class="heading-lg heading-centered">What We Stand For</h2>
             <div class="values-grid">
                 <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
@@ -206,22 +189,20 @@
                         </svg>
                     </div>
                     <h3 class="heading-sm">All Natural</h3>
-                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">No synthetic dyes, no
-                        artificial fragrances, no harsh chemicals. Ever.</p>
+                    <p>No synthetic dyes, no artificial fragrances, no harsh chemicals. Ever.</p>
                 </div>
                 <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </div>
                     <h3 class="heading-sm">Small Batch</h3>
-                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">Each batch is crafted
-                        with intention. When it's gone, it's gone.</p>
+                    <p>Each batch is crafted with intention. When it's gone, it's gone.</p>
                 </div>
                 <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -230,11 +211,10 @@
                         </svg>
                     </div>
                     <h3 class="heading-sm">Woman Owned</h3>
-                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">Every purchase supports
-                        a family business.</p>
+                    <p>Every purchase supports a family business.</p>
                 </div>
                 <div class="value-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">
+                    <div class="icon-wrap">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -243,52 +223,46 @@
                         </svg>
                     </div>
                     <h3 class="heading-sm">Heritage Recipes</h3>
-                    <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">Traditional techniques
-                        refined over generations.</p>
+                    <p>Traditional techniques refined over generations.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="section"
-        style="background: var(--color-olive-dark); text-align: center; color: var(--color-cream);">
+    <section class="section section-dark-cta">
         <div class="container">
-            <h2 class="heading-lg" style="color: white; margin-bottom: 1rem;">Ready to Try a Bar?</h2>
-            <p style="opacity: 0.8; margin-bottom: 2rem; max-width: 50ch; margin-left: auto; margin-right: auto;">
-                Handmade with love. Rooted in tradition. Growing in America.
-            </p>
+            <h2 class="heading-lg">Ready to Try a Bar?</h2>
+            <p>Handmade with love. Rooted in tradition. Growing in America.</p>
             <a href="shop.html" class="btn btn-primary">Shop the Collection</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container grid grid-3" style="align-items: start;">
+        <div class="container grid grid-3 footer-grid">
             <div>
-                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
-                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">Small-batch artisanal soaps made with care
-                    and heritage.</p>
+                <h4 class="heading-sm footer-col-heading footer-col-heading--brand">KPK Botanicals</h4>
+                <p class="footer-tagline">Small-batch artisanal soaps made with care and heritage.</p>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Shop</h4>
+                <ul class="footer-links">
                     <li><a href="shop.html">All Products</a></li>
                     <li><a href="contact.html?type=wholesale">Wholesale</a></li>
-                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                    <li><a href="faq.html">FAQ &amp; Shipping</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Connect</h4>
+                <ul class="footer-links">
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+        <div class="container footer-bottom">
             &copy; 2026 KPK Botanicals. All rights reserved.
         </div>
     </footer>

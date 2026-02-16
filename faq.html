@@ -125,9 +125,7 @@
     <nav class="navbar">
         <div class="container flex flex-between">
             <a href="index.html" class="logo-container">
-                <span
-                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em;">KPK
-                    BOTANICALS</span>
+                <span class="logo-text">KPK BOTANICALS</span>
             </a>
             <div class="hidden-mobile">
                 <ul class="flex">
@@ -137,12 +135,12 @@
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
-            <button class="btn btn-outline" style="padding: 0.5rem; border: none;"
+            <button class="btn btn-outline btn-menu"
                 onclick="document.querySelector('.mobile-menu').classList.toggle('active')">Menu</button>
         </div>
     </nav>
     <div class="mobile-menu">
-        <ul class="flex flex-col" style="text-align: center; gap: 2rem;">
+        <ul class="flex flex-col mobile-menu-list">
             <li><a href="index.html" class="heading-md">Home</a></li>
             <li><a href="shop.html" class="heading-md">Shop</a></li>
             <li><a href="about.html" class="heading-md">Our Story</a></li>
@@ -153,18 +151,18 @@
     </div>
 
     <!-- Header -->
-    <section class="section" style="text-align: center; background: var(--color-white);">
+    <section class="section section-header">
         <div class="container">
-            <span class="font-accent" style="color: var(--color-terracotta);">FAQ</span>
-            <h1 class="heading-lg" style="margin: 0.5rem 0 1rem;">Frequently Asked Questions</h1>
-            <p class="text-lead" style="margin: 0 auto;">
+            <span class="font-accent">FAQ</span>
+            <h1 class="heading-lg">Frequently Asked Questions</h1>
+            <p class="text-lead">
                 Everything you need to know about our soaps, shipping, and more.
             </p>
         </div>
     </section>
 
     <!-- FAQ Accordion -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section pt-0">
         <div class="container">
             <div class="faq-list">
 
@@ -190,7 +188,8 @@
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
                             Yes! Our gentle, cold-process formulations are designed to be kind to all skin types. Our
-                            <strong>Milk & Honey</strong> and <strong>Oats & Scrub</strong> bars are especially popular
+                            <strong>Milk &amp; Honey</strong> and <strong>Oats &amp; Scrub</strong> bars are especially
+                            popular
                             with sensitive skin. As with any skincare product, we recommend patch-testing if you have
                             known allergies.
                         </div>
@@ -204,7 +203,7 @@
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            With proper care, each bar typically lasts 4–6 weeks of daily use. To maximize longevity,
+                            With proper care, each bar typically lasts 4 to 6 weeks of daily use. To maximize longevity,
                             store your soap on a well-draining soap dish and keep it dry between uses.
                         </div>
                     </div>
@@ -232,8 +231,8 @@
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
                             Absolutely! We love creating custom scents and sets for special occasions, weddings, baby
-                            showers, corporate gifts, and more. <a href="contact.html"
-                                style="color: var(--color-terracotta);">Contact us</a> to discuss your ideas.
+                            showers, corporate gifts, and more. <a href="contact.html" class="link-terracotta">Contact
+                                us</a> to discuss your ideas.
                         </div>
                     </div>
                 </div>
@@ -246,7 +245,8 @@
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
                             All our products are cruelty-free; we never test on animals. Most of our bars are vegan,
-                            with the exception of our <strong>Milk & Honey</strong> bar, which contains goat milk and
+                            with the exception of our <strong>Milk &amp; Honey</strong> bar, which contains goat milk
+                            and
                             raw honey. Each product page specifies whether a bar is vegan.
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                         <div class="faq-answer-inner">
                             Yes! We'd love to partner with boutiques, spas, salons, and retailers. We offer competitive
                             wholesale pricing and can discuss custom labeling. Visit our <a
-                                href="contact.html?type=wholesale" style="color: var(--color-terracotta);">Contact
+                                href="contact.html?type=wholesale" class="link-terracotta">Contact
                                 page</a> and select "Wholesale Inquiry" to get started.
                         </div>
                     </div>
@@ -286,41 +286,39 @@
     </section>
 
     <!-- CTA -->
-    <section class="section" style="background: var(--color-linen); text-align: center;">
+    <section class="section section-cta">
         <div class="container">
-            <h2 class="heading-md" style="margin-bottom: 1rem;">Still Have Questions?</h2>
-            <p style="color: var(--color-gray); margin-bottom: 2rem;">We're always happy to chat.</p>
+            <h2 class="heading-md">Still Have Questions?</h2>
+            <p>We're always happy to chat.</p>
             <a href="contact.html" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container grid grid-3" style="align-items: start;">
+        <div class="container grid grid-3 footer-grid">
             <div>
-                <h4 class="heading-sm" style="color: var(--color-honey); margin-bottom: 1rem;">KPK Botanicals</h4>
-                <p style="opacity: 0.7; font-size: 0.9rem; max-width: 30ch;">Small-batch artisanal soaps made with care
-                    and heritage.</p>
+                <h4 class="heading-sm footer-col-heading footer-col-heading--brand">KPK Botanicals</h4>
+                <p class="footer-tagline">Small-batch artisanal soaps made with care and heritage.</p>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Shop</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Shop</h4>
+                <ul class="footer-links">
                     <li><a href="shop.html">All Products</a></li>
                     <li><a href="contact.html?type=wholesale">Wholesale</a></li>
-                    <li><a href="faq.html">FAQ & Shipping</a></li>
+                    <li><a href="faq.html">FAQ &amp; Shipping</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="heading-sm" style="color: var(--color-white); margin-bottom: 1rem;">Connect</h4>
-                <ul style="display: flex; flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                <h4 class="heading-sm footer-col-heading footer-col-heading--link">Connect</h4>
+                <ul class="footer-links">
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
                     <li><a href="mailto:hello@kpkbotanicals.com">Email Us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; opacity: 0.5;">
+        <div class="container footer-bottom">
             &copy; 2026 KPK Botanicals. All rights reserved.
         </div>
     </footer>
