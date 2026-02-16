@@ -6,7 +6,7 @@ const products = [
     {
         id: 'milk-honey',
         name: 'Milk & Honey',
-        price: 'TBD',
+        price: '$8',
         description: 'A creamy, velvety lather with notes of warm wildflower honey.',
         longDescription: 'Rich with raw wildflower honey and whole goat milk, this bar creates a dense, velvety lather that cushions the skin. The scent is quiet and comforting—warm milk, soft vanilla, and a hint of sun-warmed honeycomb.',
         scentNotes: { top: 'Wildflower Honey', middle: 'Warm Milk', base: 'Vanilla Bean' },
@@ -18,7 +18,7 @@ const products = [
     {
         id: 'mountain-rose',
         name: 'Mountain Rose',
-        price: 'TBD',
+        price: '$8',
         description: 'Earthy floral notes with a soft, clay-infused cleanse.',
         longDescription: 'Inspired by the wild roses that cling to the hillsides of Khyber Pakhtunkhwa. Rose clay provides a gentle, mineral-rich cleanse, while the scent captures the whole plant—petals, stem, and earth.',
         scentNotes: { top: 'Damask Rose', middle: 'Geranium Leaf', base: 'Soft Earth' },
@@ -30,7 +30,7 @@ const products = [
     {
         id: 'citrus-grove',
         name: 'Citrus Grove',
-        price: 'TBD',
+        price: '$8',
         description: 'Bright, sun-drenched zest to awaken the senses.',
         longDescription: 'Captures the sharp, clean bite of a broken citrus peel. A blend of sweet orange and grapefruit essential oils cuts through the morning fog, leaving skin feeling bright, taut, and refreshed.',
         scentNotes: { top: 'Ruby Grapefruit', middle: 'Sweet Orange', base: 'Green Peel' },
@@ -42,7 +42,7 @@ const products = [
     {
         id: 'oats-scrub',
         name: 'Oats & Scrub',
-        price: 'TBD',
+        price: '$8',
         description: 'Dual-texture exfoliation with the comfort of warm oats.',
         longDescription: 'Two distinct experiences in one bar. One side is packed with ground oats and brown sugar for a vigorous scrub; the other is smooth and creamy. The scent is wholesome and grounded—oat milk and toasted almond.',
         scentNotes: { top: 'Brown Sugar', middle: 'Steamed Oats', base: 'Toasted Almond' },
@@ -54,19 +54,19 @@ const products = [
     {
         id: 'cedar-haven',
         name: 'Cedar Haven',
-        price: 'TBD',
+        price: '$8',
         description: 'Deep, resinous woods and activated charcoal.',
         longDescription: 'The scent of a high-altitude forest after rain. Activated charcoal draws out impurities, while cedarwood and vetiver create a deep, resinous aroma that lingers close to the skin. Grounding and meditative.',
         scentNotes: { top: 'Fresh Bergamot', middle: 'Atlas Cedar', base: 'Vetiver Root' },
         ingredients: 'Saponified oils (olive, coconut, shea butter), activated charcoal, cedarwood essential oil, bentonite clay',
         weight: '4.5 oz',
         image: 'assets/images/soap_cedar_haven_1771215186080.png',
-        soldOut: false
+        soldOut: true
     },
     {
         id: 'mint-revival',
         name: 'Mint Revival',
-        price: 'TBD',
+        price: '$8',
         description: 'A cooling shock of peppermint and French green clay.',
         longDescription: 'An invigorating cold plunge for the skin. High levels of peppermint and eucalyptus oil create an immediate cooling sensation, while French green clay absorbs excess oil. Ideal for hot days or tired muscles.',
         scentNotes: { top: 'Icy Peppermint', middle: 'Eucalyptus Leaf', base: 'Clean Clay' },

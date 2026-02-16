@@ -9,7 +9,7 @@
         content="Handcrafted artisanal soaps made with mountain-sourced ingredients and generations of tradition. Small-batch, woman-owned business in Sacramento, CA.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/kpk_botanicals_logo_1771215052715.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,28 +65,96 @@
         }
     </style>
 
-    <!-- SEO Schema (JSON-LD) -->
+    <!-- SEO Schema (JSON-LD) — Organization + LocalBusiness for AI Shopping Discovery -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "name": "Dew — by Bushra",
-      "url": "https://dewbybushra.com",
-      "logo": "https://dewbybushra.com/assets/images/logo.png",
+      "alternateName": "Dew by Bushra",
+      "url": "https://zaydiscold.github.io/bushra-soap-site/",
+      "logo": "https://zaydiscold.github.io/bushra-soap-site/assets/images/favicon.png",
+      "image": "https://zaydiscold.github.io/bushra-soap-site/assets/images/hero_hd.png",
+      "description": "Handcrafted artisanal soaps made with mountain-sourced ingredients and generations of Pakistani tradition. Small-batch, woman-owned business in Sacramento, CA.",
       "founder": {
         "@type": "Person",
         "name": "Bushra",
-        "jobTitle": "Soap Artisan"
+        "jobTitle": "Soap Artisan & Founder"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "priceRange": "$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Credit Card",
+      "areaServed": "US",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Artisanal Soap Collection",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Milk & Honey Soap", "description": "A creamy, velvety lather with notes of warm wildflower honey", "offers": {"@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mountain Rose Soap", "description": "Earthy floral notes with a soft, clay-infused cleanse", "offers": {"@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Citrus Grove Soap", "description": "Bright, sun-drenched zest to awaken the senses", "offers": {"@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Oats & Scrub Soap", "description": "Dual-texture exfoliation with the comfort of warm oats", "offers": {"@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cedar Haven Soap", "description": "Deep, resinous woods and activated charcoal", "offers": {"@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/OutOfStock"}}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mint Revival Soap", "description": "A cooling shock of peppermint and French green clay", "offers": {"@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}}
+        ]
       },
       "sameAs": [
         "https://instagram.com/dewbybushra"
       ],
-      "description": "Artisanal soap company based in Sacramento, fusing Pakistani mountain traditions with modern skincare."
+      "keywords": "handmade soap, artisanal soap, natural soap, Sacramento soap, organic soap, cold process soap, woman-owned business, Pakistani heritage soap, KPK soap, small batch soap, vegan soap, cruelty free soap, hand crafted soap Sacramento CA"
+    }
+    </script>
+
+    <!-- WebSite Schema for Sitelinks Search Box -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Dew — by Bushra",
+      "url": "https://zaydiscold.github.io/bushra-soap-site/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://zaydiscold.github.io/bushra-soap-site/shop.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Shipping Policy for AI Shopping -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "5.95",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 5, "unitCode": "DAY" }
+      },
+      "doesNotShip": false
     }
     </script>
 </head>
 
 <body>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner" role="banner" aria-label="Promotion">
+        Free shipping on 3+ bars · $8 per bar · Handcrafted in Sacramento
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
