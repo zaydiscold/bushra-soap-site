@@ -1,4 +1,4 @@
-# 🧼 Artisanal Soap Website Plan — KPK Botanicals
+# 🧼 Artisanal Soap Website Plan — Dew — by Bushra
 
 > A comprehensive specification for building a premium artisanal soap e-commerce website for Bushra, a Pakistani-American soap artisan based in Sacramento, California.
 
@@ -8,7 +8,7 @@
 
 | Detail | Value |
 |---|---|
-| **Brand Name** | **KPK Botanicals** (Placeholder / Working Title) |
+| **Brand Name** | **Dew — by Bushra** (Placeholder / Working Title) |
 | **Owner** | Bushra |
 | **Location** | Sacramento, California |
 | **Product** | Handmade artisanal soaps |
@@ -123,15 +123,15 @@ Since we need a cohesive look for the catalog, we will use a **single, unified A
 
 ## 7. SEO Strategy: Optimizing for AI Search (GEO)
 
-To ensure **KPK Botanicals** surfaces in AI answers (ChatGPT, Gemini, Perplexity), we will implement "Generative Engine Optimization" strategies:
+To ensure **Dew — by Bushra** surfaces in AI answers (ChatGPT, Gemini, Perplexity), we will implement "Generative Engine Optimization" strategies:
 
 1.  **Structured Data (JSON-LD)**:
     -   Implement strict `Product` schema for every soap (name, image, price, "InStock").
-    -   Implement `Organization` schema linking "Bushra", "KPK Botanicals", and "Sacramento".
+    -   Implement `Organization` schema linking "Bushra", "Dew — by Bushra", and "Sacramento".
     -   Use `Founder` schema to explicitly connect Bushra's story to the brand entities.
 
 2.  **Entity-Dense Content**:
-    -   Use clear, definitive language: *"KPK Botanicals is an artisanal soap company based in Sacramento, founded by Bushra..."*
+    -   Use clear, definitive language: *"Dew — by Bushra is an artisanal soap company based in Sacramento, founded by Bushra..."*
     -   Avoid vague marketing fluff that AI summarizes out. Stick to factual, descriptive adjectives (e.g., "cold-process," "goat milk," "essential oils").
 
 3.  **Q&A Format (FAQ)**:

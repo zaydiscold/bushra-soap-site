@@ -279,13 +279,20 @@ h6 {
 
 /* Footer */
 footer {
-    background-color: var(--color-olive-dark);
+    background: linear-gradient(165deg, #2c3027 0%, #1a1e17 100%);
     color: var(--color-cream);
     padding: var(--spacing-xl) 0 var(--spacing-lg);
+    border-top: 3px solid var(--color-terracotta);
+    position: relative;
+}
+
+footer a {
+    transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 footer a:hover {
     color: var(--color-honey);
+    opacity: 1;
 }
 
 /* Mobile Menu Overlay */
@@ -478,37 +485,56 @@ footer a:hover {
 }
 
 .footer-col-heading {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
 }
 
 .footer-col-heading--brand {
     color: var(--color-honey);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-transform: none;
+    letter-spacing: 0.03em;
 }
 
 .footer-col-heading--link {
-    color: var(--color-white);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-tagline {
-    opacity: 0.7;
+    opacity: 0.65;
     font-size: 0.9rem;
     max-width: 30ch;
+    line-height: 1.7;
+    font-style: italic;
+    font-family: var(--font-accent);
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    opacity: 0.8;
+    gap: 0.65rem;
+}
+
+.footer-links a {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    opacity: 1;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     margin-top: 3rem;
     padding-top: 1.5rem;
     text-align: center;
     font-size: 0.8rem;
-    opacity: 0.5;
+    opacity: 0.4;
+    letter-spacing: 0.03em;
 }
 
 /* CTA section */

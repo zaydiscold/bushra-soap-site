@@ -1,5 +1,5 @@
 /*
- * KPK Botanicals - Product Data & Rendering
+ * Dew — by Bushra - Product Data & Rendering
  */
 
 const products = [
